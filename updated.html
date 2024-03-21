@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Camp Activities Inquiry</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        #camp-activities-inquiry {
+            max-width: 600px;
+            margin: 50px auto;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+        }
+
+        select, textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff; /* Blue color */
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #0056b3; /* Darker blue on hover */
+        }
+
+        option[disabled] {
+            color: #888;
+        }
+    </style>
+</head>
+<body>
+    <section id="camp-activities-inquiry">
+        <h1>Camp Activities Inquiry</h1>
+        <form action="/submit-form" method="POST">
+            <div class="form-group">
+                <label for="activity-select">Which camp activities are you most looking forward to?</label>
+                <select id="activity-select" name="activity">
+                    <option value="" disabled selected>--Please choose an option--</option>
+                    <option value="hiking">Hiking</option>
+                    <option value="canoeing">Canoeing</option>
+                    <option value="fishing">Fishing</option>
+                    <option value="crafts">Crafts</option>
+                    <option value="archery">Archery</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="food-allergies">Food Allergies (if any)</label>
+                <textarea id="food-allergies" name="food_allergies" rows="4" cols="50"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="additional-info">Additional things the counselor should know</label>
+                <textarea id="additional-info" name="additional_info" rows="4" cols="50"></textarea>
+            </div>
+
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+</body>
+</html>
